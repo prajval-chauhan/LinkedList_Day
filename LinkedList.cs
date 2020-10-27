@@ -59,5 +59,39 @@ namespace LinkedList_Day16
             node.next = this.head;
             this.head = node;
         }
+        /// <summary>
+        /// This method inserts the given data betweent the already added values
+        /// </summary>
+        /// <param name="position">The position.</param>
+        /// <param name="data">The data.</param>
+        /// <returns></returns>
+        internal Node InsertionAtParticularPosition(int position, int data)
+        {
+            if (position < 1)
+                Console.WriteLine("Invalid Position");
+            else if (position == 1)
+            {
+                var node = new Node(data);
+                node.next = this.head;
+                head = node;
+            }
+            else
+            {
+                while (position-- != 0)
+                {
+                    if (position == 1)
+                    {
+                        Node node = new Node(data);
+                        node.next = this.head.next;
+                        head.next = node;
+                        break;
+                    }
+                    head = head.next;
+                }
+                if (position != 1)
+                    Console.WriteLine("Position out of range");
+            }
+            return head;
+        }
     }
 }
