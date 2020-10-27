@@ -8,9 +8,10 @@ namespace LinkedList_Day16
         {
             Console.WriteLine("Linked List");
             LinkedList list = new LinkedList();
-            list.InsertAtFront(70);
-            list.InsertAtFront(30);
-            list.InsertAtFront(56);
+            list.Append(56);
+            list.Append(30);
+            list.Append(70);
+            //list.InsertionAtParticularPosition(2, 30);
             list.Display();
         }
     }

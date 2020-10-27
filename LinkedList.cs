@@ -8,12 +8,13 @@ namespace LinkedList_Day16
     {
         internal Node head;
         /// <summary>
-        /// Adds the specified data into the node. Also assigns the head node and create a next pointer which points
-        /// to the next node
-        /// This method add to the rear end of the list so it is basically performing the append operation
+        /// Adds the specified data into the node. Also assigns the 
+        /// head node and create a next pointer which points to the next node
+        /// This method add to the rear end of the list so it is basically 
+        /// performing the append operation
         /// </summary>
         /// <param name="data">The data.</param>
-        internal void Add(int data)
+        internal void Append(int data)
         {
             Node node = new Node(data);
             if (this.head == null)
@@ -46,6 +47,12 @@ namespace LinkedList_Day16
                 temp = temp.next;
             }
         }
+        /// <summary>
+        /// This method inserts the node to the front of the list
+        /// Makes the next pointer of the node point to the head pointer
+        /// and then makes the head pointer point to the new node
+        /// </summary>
+        /// <param name="data">The data.</param>
         internal void InsertAtFront(int data)
         {
             Node node = new Node(data);
