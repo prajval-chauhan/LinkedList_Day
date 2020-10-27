@@ -142,5 +142,17 @@ namespace LinkedList_Day16
             }
             return count;
         }
+        internal void DeleteNode(int data)
+        {
+            Node temp;
+            temp = this.head;
+            while(temp.next != null)
+            {
+                if (temp.next.data == data)
+                    temp.next = temp.next.next;
+                temp = temp.next;
+            }
+
+        }
     }
 }

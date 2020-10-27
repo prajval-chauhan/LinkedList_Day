@@ -12,8 +12,10 @@ namespace LinkedList_Day16
             list.Append(70);
             list.InsertionAtParticularPosition(2, 30);
             Console.WriteLine("\nThe node number of 30 is {0}", list.SearchNode(30));
-            list.DeleteFrontNode();
-            list.DeleteLastNode();
+            list.DeleteNode(30);
+            list.Display();
+            //list.DeleteFrontNode();
+            //list.DeleteLastNode();
         }
     }
 }
