@@ -105,5 +105,24 @@ namespace LinkedList_Day16
                 this.head = this.head.next;
             }
         }
+        /// <summary>
+        /// Deletes the last node form the list
+        /// </summary>
+        internal void DeleteLastNode()
+        {
+            if (this.head == null)
+                Console.WriteLine("The list is empty");
+            else if(this.head.next == null)
+                Console.WriteLine("The list have only one element");
+            else
+            {
+                Node temp = this.head;
+                while(temp.next.next != null)
+                {
+                    temp = temp.next;
+                }
+                temp.next = null;
+            }
+        }
     }
 }
