@@ -6,8 +6,7 @@ namespace LinkedList_Day16
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
-
+            Console.WriteLine("Linked List");
             LinkedList list = new LinkedList();
             list.Add(56);
             list.Add(30);
