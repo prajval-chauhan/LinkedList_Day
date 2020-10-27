@@ -10,6 +10,7 @@ namespace LinkedList_Day16
         /// <summary>
         /// Adds the specified data into the node. Also assigns the head node and create a next pointer which points
         /// to the next node
+        /// This method add to the rear end of the list so it is basically performing the append operation
         /// </summary>
         /// <param name="data">The data.</param>
         internal void Add(int data)
@@ -44,6 +45,12 @@ namespace LinkedList_Day16
                 Console.Write(temp.data + " ");
                 temp = temp.next;
             }
+        }
+        internal void InsertAtFront(int data)
+        {
+            Node node = new Node(data);
+            node.next = this.head;
+            this.head = node;
         }
     }
 }
