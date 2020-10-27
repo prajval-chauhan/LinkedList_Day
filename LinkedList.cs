@@ -93,5 +93,17 @@ namespace LinkedList_Day16
             }
             return head;
         }
+        /// <summary>
+        /// Deletes the front node.
+        /// </summary>
+        internal void DeleteFrontNode()
+        {
+            if (this.head == null)
+                Console.WriteLine("List is empty");
+            else
+            {
+                this.head = this.head.next;
+            }
+        }
     }
 }
