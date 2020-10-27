@@ -124,5 +124,23 @@ namespace LinkedList_Day16
                 temp.next = null;
             }
         }
+        /// <summary>
+        /// Searches if there is a node present in the list which has the given value
+        /// and returns the number at which the node is present in the linked list.
+        /// </summary>
+        /// <param name="value">The value.</param>
+        /// <returns></returns>
+        internal int SearchNode(int value)
+        {
+            int count = 0;
+            while(this.head != null)
+            {
+                count ++;
+                if (this.head.data == value)
+                    break;
+                this.head = this.head.next;
+            }
+            return count;
+        }
     }
 }
